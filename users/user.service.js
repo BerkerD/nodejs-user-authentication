@@ -28,7 +28,7 @@ async function getById(id) {
 
 async function create(userParam) {
     // validate
-    if (await User.findOne({ username: userParam.email })) {
+    if (await User.findOne({ email: userParam.email })) {
         throw 'e-mail "' + userParam.email + '" is already exists';
     }
 
